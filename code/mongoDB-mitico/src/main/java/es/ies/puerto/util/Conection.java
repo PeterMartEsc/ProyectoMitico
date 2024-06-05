@@ -9,6 +9,8 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 public class Conection {
+
+    /*
     public static void main( String[] args ) {
         // Replace the placeholder with your MongoDB deployment's connection string
         String uri = "mongodb+srv://PeterMartEsc:eanpeEbewXXNtFud@cluster0.kkjkc0h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -23,4 +25,5 @@ public class Conection {
             }
         }
     }
+     */
 }
