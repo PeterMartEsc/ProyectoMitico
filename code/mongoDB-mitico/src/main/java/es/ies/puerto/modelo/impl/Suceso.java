@@ -6,6 +6,8 @@ public class Suceso {
     private int id;
     private String nombre;
 
+    private String descripcion;
+
     public Suceso() {
     }
 
@@ -13,9 +15,10 @@ public class Suceso {
         this.id = id;
     }
 
-    public Suceso(int id, String nombre) {
+    public Suceso(int id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
+        this.descripcion = descripcion;
     }
 
     public int getId() {
@@ -32,6 +35,14 @@ public class Suceso {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     @Override
@@ -52,6 +63,7 @@ public class Suceso {
         return "Suceso{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
                 '}';
     }
 }
