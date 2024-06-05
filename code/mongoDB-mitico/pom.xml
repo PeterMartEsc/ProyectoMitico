@@ -1,42 +1,38 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>es.ies.puerto</groupId>
-  <artifactId>mongoDB-ejemplo-bae</artifactId>
-  <version>1.0</version>
-  <packaging>jar</packaging>
-
-  <name>mongoDB-ejemplo-bae</name>
-  <url>http://maven.apache.org</url>
+  <artifactId>servicio-red-personajes-marvel</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>${artifactId}</name>
 
   <properties>
-
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.6.0</junit.version>
-
+    <mokito-version>2.21.0</mokito-version>
     <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <checkstyle.version>8.39</checkstyle.version>
-
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
     <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-
     <jacoco.unit-tests.limit.instruction-ratio>0%</jacoco.unit-tests.limit.instruction-ratio>
     <jacoco.unit-tests.limit.branch-ratio>0%</jacoco.unit-tests.limit.branch-ratio>
     <jacoco.unit-tests.limit.class-complexity>21</jacoco.unit-tests.limit.class-complexity>
     <jacoco.unit-tests.limit.method-complexity>10</jacoco.unit-tests.limit.method-complexity>
-
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sqlite-jdbc.version>3.32.3</sqlite-jdbc.version>
     <hibernate.version>5.6.12.Final</hibernate.version>
-
     <log4j.version>2.17.1</log4j.version>
-
     <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
-
+    <cxf.version>3.4.10</cxf.version>
+    <spring.version>5.3.20</spring.version>
+    <servlet.api.version>2.5</servlet.api.version>
+    <jackson.version>2.13.2</jackson.version>
+    <mockito.version>5.3.1</mockito.version>
   </properties>
 
   <dependencies>
@@ -46,18 +42,6 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-sync</artifactId>
-      <version>5.1.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.36</version>
     </dependency>
 
     <dependency>
@@ -99,15 +83,85 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mokito-version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>${mokito-version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+      <version>${cxf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>${servlet.api.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-xml-provider</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!-- Mockito dependency -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito JUnit Jupiter integration -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- MongoDB -->
+
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongodb-driver-sync</artifactId>
+      <version>5.1.0</version>
+    </dependency>
 
   </dependencies>
 
-  <!-- Plugins -->
-
   <build>
-
     <plugins>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -128,13 +182,11 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
       </plugin>
-
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
@@ -202,7 +254,6 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -220,7 +271,6 @@
           </annotationProcessorPaths>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -234,13 +284,10 @@
           <warName>${name}</warName>
         </configuration>
       </plugin>
-
     </plugins>
 
   </build>
-
   <reporting>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -248,7 +295,8 @@
         <version>${maven-javadoc-plugin.version}</version>
       </plugin>
     </plugins>
-
   </reporting>
+
+
 
 </project>
