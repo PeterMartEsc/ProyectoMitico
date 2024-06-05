@@ -22,8 +22,6 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
     - [Sucesos]()
 
-    - [Heroes]()
-
 - [Codigo]()
 
 </div>
