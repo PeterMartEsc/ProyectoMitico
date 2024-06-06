@@ -7,4 +7,6 @@ public interface UtilitiesVariables {
     int id = 1;
     String nombre = "nombreTest";
     String concepto="diosTesting";
+
+    String anios = "aniosTest";
 }
