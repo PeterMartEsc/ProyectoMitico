@@ -1,11 +1,11 @@
 package es.ies.puerto.modelo.impl;
 
-import es.ies.puerto.utilities.UtilitiesVariables;
+import es.ies.puerto.utilities.Utilities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class DiosClassTest implements UtilitiesVariables {
+public class DiosClassTest extends Utilities {
 
     Dios dios;
 
