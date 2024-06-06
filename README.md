@@ -12,7 +12,7 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
 - [Tablas de la BBDD](tablas)
 
-    - [Procedencia]()
+    - [Procedencia](tablas/procedencia/img/procedencia-tabla.png)
 
     - [Dioses](tablas/dioses/img/dioses-tabla.png)
 
