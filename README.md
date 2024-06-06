@@ -16,7 +16,7 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
     - [Dioses](tablas/dioses/img/dioses-tabla.png)
 
-    - [Criaturas]()
+    - [Bestias](tablas/bestias/img/Tabla-bestias.png)
 
     - [Lugares]()
 
