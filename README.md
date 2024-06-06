@@ -14,7 +14,7 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
     - [Procedencia]()
 
-    - [Dioses]()
+    - [Dioses](tablas/dioses/img/dioses-tabla.png)
 
     - [Criaturas]()
 
