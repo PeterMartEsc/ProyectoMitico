@@ -2,22 +2,23 @@ package es.ies.puerto.modelo.impl;
 
 import java.util.Objects;
 
-public class Bestia {
+public class Suceso {
     private int id;
     private String nombre;
-    private String cualidad;
 
-    public Bestia() {
+    private String descripcion;
+
+    public Suceso() {
     }
 
-    public Bestia(int id) {
+    public Suceso(int id) {
         this.id = id;
     }
 
-    public Bestia(int id, String nombre, String cualidad) {
+    public Suceso(int id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
-        this.cualidad = cualidad;
+        this.descripcion = descripcion;
     }
 
     public int getId() {
@@ -36,20 +37,20 @@ public class Bestia {
         this.nombre = nombre;
     }
 
-    public String getCualidad() {
-        return cualidad;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setCualidad(String cualidad) {
-        this.cualidad = cualidad;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Bestia bestia = (Bestia) o;
-        return id == bestia.id;
+        Suceso suceso = (Suceso) o;
+        return id == suceso.id;
     }
 
     @Override
@@ -59,10 +60,10 @@ public class Bestia {
 
     @Override
     public String toString() {
-        return "Bestia{" +
+        return "Suceso{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
-                ", cualidad='" + cualidad + '\'' +
+                ", descripcion='" + descripcion + '\'' +
                 '}';
     }
 }
