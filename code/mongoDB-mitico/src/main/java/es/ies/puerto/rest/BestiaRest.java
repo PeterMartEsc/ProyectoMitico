@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/bestia")
 public class BestiaRest implements IRest <BestiaDTO> {
-    BestiaService bestiaService;
+    private BestiaService bestiaService;
 
     public BestiaRest() {
     }
