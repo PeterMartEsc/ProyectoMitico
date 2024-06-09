@@ -31,11 +31,11 @@ public class LugarDtoTest extends Utilities {
 
         lugarDTO.setId(id);
         lugarDTO.setNombre(nombre);
-        lugarDTO.setConcepto(concepto);
+        lugarDTO.setLocalizacion(concepto);
 
         Assertions.assertEquals(id, lugarDTO.getId(), MESSAGE_ERROR);
         Assertions.assertEquals(nombre, lugarDTO.getNombre(), MESSAGE_ERROR);
-        Assertions.assertEquals(concepto, lugarDTO.getConcepto(), MESSAGE_ERROR);
+        Assertions.assertEquals(concepto, lugarDTO.getLocalizacion(), MESSAGE_ERROR);
     }
 
     @Test

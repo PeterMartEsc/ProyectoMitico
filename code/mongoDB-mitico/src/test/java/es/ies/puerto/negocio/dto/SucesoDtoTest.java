@@ -31,11 +31,11 @@ public class SucesoDtoTest extends Utilities {
 
         sucesoDTO.setId(id);
         sucesoDTO.setNombre(nombre);
-        sucesoDTO.setConcepto(concepto);
+        sucesoDTO.setDescripcion(concepto);
 
         Assertions.assertEquals(id, sucesoDTO.getId(), MESSAGE_ERROR);
         Assertions.assertEquals(nombre, sucesoDTO.getNombre(), MESSAGE_ERROR);
-        Assertions.assertEquals(concepto, sucesoDTO.getConcepto(), MESSAGE_ERROR);
+        Assertions.assertEquals(concepto, sucesoDTO.getDescripcion(), MESSAGE_ERROR);
     }
 
     @Test

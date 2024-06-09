@@ -31,11 +31,11 @@ public class BestiaDtoTest extends Utilities {
 
         bestiaDTO.setId(id);
         bestiaDTO.setNombre(nombre);
-        bestiaDTO.setConcepto(concepto);
+        bestiaDTO.setCualidad(concepto);
 
         Assertions.assertEquals(id, bestiaDTO.getId(), MESSAGE_ERROR);
         Assertions.assertEquals(nombre, bestiaDTO.getNombre(), MESSAGE_ERROR);
-        Assertions.assertEquals(concepto, bestiaDTO.getConcepto(), MESSAGE_ERROR);
+        Assertions.assertEquals(concepto, bestiaDTO.getCualidad(), MESSAGE_ERROR);
     }
 
     @Test

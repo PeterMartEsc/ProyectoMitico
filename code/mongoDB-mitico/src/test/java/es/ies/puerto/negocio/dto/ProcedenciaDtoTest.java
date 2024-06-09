@@ -31,11 +31,11 @@ public class ProcedenciaDtoTest extends Utilities {
 
         procedenciaDTO.setId(id);
         procedenciaDTO.setNombre(nombre);
-        procedenciaDTO.setConcepto(concepto);
+        procedenciaDTO.setAnios(concepto);
 
         Assertions.assertEquals(id, procedenciaDTO.getId(), MESSAGE_ERROR);
         Assertions.assertEquals(nombre, procedenciaDTO.getNombre(), MESSAGE_ERROR);
-        Assertions.assertEquals(concepto, procedenciaDTO.getConcepto(), MESSAGE_ERROR);
+        Assertions.assertEquals(concepto, procedenciaDTO.getAnios(), MESSAGE_ERROR);
     }
 
     @Test
