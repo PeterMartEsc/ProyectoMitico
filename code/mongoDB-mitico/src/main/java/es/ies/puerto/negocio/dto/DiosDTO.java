@@ -1,22 +1,22 @@
-package es.ies.puerto.modelo.impl;
+package es.ies.puerto.negocio.dto;
 
 import java.util.Objects;
 
-public class Dios {
+public class DiosDTO {
     private int id;
 
     private String nombre;
 
     private String concepto;
 
-    public Dios() {
+    public DiosDTO() {
     }
 
-    public Dios(int id) {
+    public DiosDTO(int id) {
         this.id = id;
     }
 
-    public Dios(int id, String nombre, String concepto) {
+    public DiosDTO(int id, String nombre, String concepto) {
         this.id = id;
         this.nombre = nombre;
         this.concepto = concepto;
@@ -50,8 +50,8 @@ public class Dios {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Dios dios = (Dios) o;
-        return id == dios.id;
+        DiosDTO diosDTO = (DiosDTO) o;
+        return id == diosDTO.id;
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Dios {
 
     @Override
     public String toString() {
-        return "Dios{" +
+        return "DiosDTO{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", concepto='" + concepto + '\'' +
