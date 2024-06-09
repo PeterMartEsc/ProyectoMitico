@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/dioses")
+@RequestMapping("/dios")
 public class DiosRest implements IRest <DiosDTO> {
     DiosService diosService;
 

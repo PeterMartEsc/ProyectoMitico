@@ -18,7 +18,7 @@ public class DiosService implements IService<DiosDTO> {
     private DaoDios daoDios;
 
     @Autowired
-    public void setPersonaDao(DaoDios daoDios) {
+    public void setDaoDios(DaoDios daoDios) {
         this.daoDios = daoDios;
     }
 
