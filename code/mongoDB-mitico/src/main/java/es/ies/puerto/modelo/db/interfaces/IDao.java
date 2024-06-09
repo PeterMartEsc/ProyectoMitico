@@ -9,7 +9,7 @@ public interface IDao <T> {
     public List<T> getAll();
      */
     public T getById(int id);
-    public void addElement(T t);
+    public boolean addElement(T t);
     public void deleteElement(int id);
-    public void updateElement(T t);
+    public boolean updateElement(T t);
 }

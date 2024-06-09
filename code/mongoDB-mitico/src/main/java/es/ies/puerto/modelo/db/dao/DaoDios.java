@@ -25,17 +25,49 @@ public class DaoDios extends DaoEntityAbstract implements IDao {
     }
 
     @Override
-    public void addElement(Object o) {
-
+    public boolean addElement(Object o) {
+        try {
+            getEm().getTransaction().begin();
+            getEm().persist(o);
+            getEm().getTransaction().commit();
+            return true;
+        }catch (Exception exception){
+            return false;
+        }finally {
+            if (getEm()!= null && getEm().isOpen()) {
+                getEm().close();
+            }
+        }
     }
 
     @Override
     public void deleteElement(int id) {
-
+        Dios dios = new Dios(id);
+        try {
+            getEm().getTransaction().begin();
+            getEm().remove(dios);
+            getEm().getTransaction().commit();
+        }catch (Exception exception){
+        }finally {
+            if (getEm()!= null && getEm().isOpen()) {
+                getEm().close();
+            }
+        }
     }
 
     @Override
-    public void updateElement(Object o) {
-
+    public boolean updateElement(Object o) {
+        try {
+            getEm().getTransaction().begin();
+            getEm().merge(o);
+            getEm().getTransaction().commit();
+            return true;
+        }catch (Exception exception){
+            return false;
+        }finally {
+            if (getEm()!= null && getEm().isOpen()) {
+                getEm().close();
+            }
+        }
     }
 }
