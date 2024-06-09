@@ -18,9 +18,9 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
     - [Bestias](tablas/bestias/img/Tabla-bestias.png)
 
-    - [Lugares]()
+    - [Lugares](tablas/lugares/img/tabla-lugares.png)
 
-    - [Sucesos]()
+    - [Sucesos](tablas/sucesos/Tabla-Sucesos.png)
 
 - [Codigo](code/mongoDB-mitico)
 
