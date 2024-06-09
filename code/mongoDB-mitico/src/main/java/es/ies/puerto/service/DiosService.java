@@ -16,24 +16,10 @@ public class DiosService implements IService<DiosDTO> {
     private final static Logger LOGGER = LoggerFactory.getLogger(DiosService.class);
 
     private DaoDios daoDios;
+
     @Autowired
     public void setPersonaDao(DaoDios daoDios) {
         this.daoDios = daoDios;
-    }
-
-    @Override
-    public void addToCollection(DiosDTO diosDTO) {
-        daoDios.insert(DiosMapper.INSTANCE.dtoToEntity(diosDTO));
-    }
-
-    @Override
-    public void updateCollection(DiosDTO diosDTO) {
-        Dios dios = daoDios.findById(diosDTO.getId()).orElseThrow(
-                () -> new RuntimeException("Cannot find " + diosDTO.getNombre() + " entity"));
-
-        dios = DiosMapper.INSTANCE.dtoToEntity(diosDTO);
-
-        daoDios.save(dios);
     }
 
     @Override
@@ -53,9 +39,24 @@ public class DiosService implements IService<DiosDTO> {
     }
 
     @Override
+    public void addToCollection(DiosDTO diosDTO) {
+        daoDios.insert(DiosMapper.INSTANCE.dtoToEntity(diosDTO));
+    }
+
+    @Override
     public void deleteFromCollection(int id) {
         Dios equipment = daoDios.findById(id).orElseThrow(
                 () -> new RuntimeException("Cannot find '" + id + "' entity"));
         daoDios.delete(equipment);
+    }
+
+    @Override
+    public void updateCollection(DiosDTO diosDTO) {
+        Dios dios = daoDios.findById(diosDTO.getId()).orElseThrow(
+                () -> new RuntimeException("Cannot find " + diosDTO.getNombre() + " entity"));
+
+        dios = DiosMapper.INSTANCE.dtoToEntity(diosDTO);
+
+        daoDios.save(dios);
     }
 }
