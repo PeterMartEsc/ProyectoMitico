@@ -6,8 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
-public interface DiosMapper {
-    DiosMapper INSTANCE = Mappers.getMapper(DiosMapper.class);
+public interface IDiosMapper {
+    IDiosMapper INSTANCE = Mappers.getMapper(IDiosMapper.class);
 
     Dios dtoToEntity (DiosDTO diosDTO);
     DiosDTO entityToDto (Dios dios);

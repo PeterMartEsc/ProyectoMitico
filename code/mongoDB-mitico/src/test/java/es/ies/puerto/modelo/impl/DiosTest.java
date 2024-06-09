@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class DiosClassTest extends Utilities {
+public class DiosTest extends Utilities {
 
     Dios dios;
 
