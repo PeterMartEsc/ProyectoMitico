@@ -2,12 +2,12 @@ package es.ies.puerto.modelo.db.dao;
 
 import es.ies.puerto.modelo.db.abstractas.DaoEntityAbstract;
 import es.ies.puerto.modelo.db.interfaces.IDao;
-import es.ies.puerto.modelo.impl.Bestia;
+import es.ies.puerto.modelo.impl.Procedencia;
 
 import javax.persistence.EntityManagerFactory;
 
-public class DaoBestia extends DaoEntityAbstract implements IDao {
-    public DaoBestia(EntityManagerFactory emf) {
+public class DaoProcedencia extends DaoEntityAbstract implements IDao {
+    public DaoProcedencia(EntityManagerFactory emf) {
         super(emf);
     }
 
@@ -19,8 +19,8 @@ public class DaoBestia extends DaoEntityAbstract implements IDao {
 
     @Override
     public Object getById(int id) {
-        Bestia bestia = new Bestia(id);
-        return getEm().find(Bestia.class,bestia.getId());
+        Procedencia procedencia = new Procedencia(id);
+        return getEm().find(Procedencia.class,procedencia.getId());
     }
 
     @Override
@@ -41,10 +41,10 @@ public class DaoBestia extends DaoEntityAbstract implements IDao {
 
     @Override
     public void deleteElement(int id) {
-        Bestia bestia = new Bestia(id);
+        Procedencia procedencia = new Procedencia(id);
         try {
             getEm().getTransaction().begin();
-            getEm().remove(bestia);
+            getEm().remove(procedencia);
             getEm().getTransaction().commit();
         }catch (Exception exception){
         }finally {
