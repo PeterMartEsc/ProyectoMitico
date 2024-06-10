@@ -1,8 +1,0 @@
--- Pedro --
-
-User Pedro: petermartesc
-Password Pedro: J4qyuk2gP6mHttJ8
-
-Conexión: mongodb+srv://petermartesc:J4qyuk2gP6mHttJ8@proyectomitico.0iyfune.mongodb.net/?retryWrites=true&w=majority&appName=ProyectoMitico
-
--- Alejandro --
