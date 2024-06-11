@@ -9,7 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/**
+ * Operaciones DAO REST de la clase Lugar
+ */
 @RestController
 @RequestMapping("/lugar")
 public class LugarRest implements IRest <LugarDTO> {

@@ -3,7 +3,7 @@ package es.ies.puerto.service;
 import es.ies.puerto.modelo.db.dao.DaoDios;
 import es.ies.puerto.modelo.impl.Dios;
 import es.ies.puerto.negocio.dto.DiosDTO;
-import es.ies.puerto.negocio.mapper.IDiosMapper;
+import es.ies.puerto.negocio.mapper.struct.IDiosMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Operaciones DAO-Service de la clase Dios
+ */
 @Service
 public class DiosService implements IService<DiosDTO> {
     private final static Logger LOGGER = LoggerFactory.getLogger(DiosService.class);

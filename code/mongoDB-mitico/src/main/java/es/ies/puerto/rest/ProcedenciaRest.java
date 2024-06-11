@@ -9,7 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/**
+ * Operaciones DAO REST de la clase Procedimiento
+ */
 @RestController
 @RequestMapping("/procedencia")
 public class ProcedenciaRest implements IRest <ProcedenciaDTO> {

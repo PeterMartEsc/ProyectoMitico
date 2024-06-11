@@ -3,7 +3,7 @@ package es.ies.puerto.service;
 import es.ies.puerto.modelo.db.dao.DaoSuceso;
 import es.ies.puerto.modelo.impl.Suceso;
 import es.ies.puerto.negocio.dto.SucesoDTO;
-import es.ies.puerto.negocio.mapper.ISucesoMapper;
+import es.ies.puerto.negocio.mapper.struct.ISucesoMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Operaciones DAO-Service de la clase Suceso
+ */
 @Service
 public class SucesoService implements IService<SucesoDTO> {
     private final static Logger LOGGER = LoggerFactory.getLogger(SucesoService.class);

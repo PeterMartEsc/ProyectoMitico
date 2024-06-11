@@ -3,7 +3,7 @@ package es.ies.puerto.service;
 import es.ies.puerto.modelo.db.dao.DaoBestia;
 import es.ies.puerto.modelo.impl.Bestia;
 import es.ies.puerto.negocio.dto.BestiaDTO;
-import es.ies.puerto.negocio.mapper.IBestiaMapper;
+import es.ies.puerto.negocio.mapper.struct.IBestiaMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Operaciones DAO-Service de la clase Bestia
+ */
 @Service
 public class BestiaService implements IService<BestiaDTO> {
     private final static Logger LOGGER = LoggerFactory.getLogger(BestiaService.class);

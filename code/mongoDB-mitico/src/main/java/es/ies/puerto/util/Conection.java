@@ -10,6 +10,11 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 public class Conection {
 
+    /**
+     * Metodo Main que haría la conexión, pero no estamos usando
+     * @param args
+     */
+
     public static void main( String[] args ) {
         /*
         // Replace the placeholder with your MongoDB deployment's connection string

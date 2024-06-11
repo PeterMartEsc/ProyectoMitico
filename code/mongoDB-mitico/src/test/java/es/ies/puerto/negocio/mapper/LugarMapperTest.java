@@ -2,6 +2,7 @@ package es.ies.puerto.negocio.mapper;
 
 import es.ies.puerto.modelo.impl.Lugar;
 import es.ies.puerto.negocio.dto.LugarDTO;
+import es.ies.puerto.negocio.mapper.struct.ILugarMapper;
 import es.ies.puerto.utilities.Utilities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

@@ -9,7 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/**
+ * Operaciones DAO REST de la clase Suceso
+ */
 @RestController
 @RequestMapping("/suceso")
 public class SucesoRest implements IRest <SucesoDTO> {

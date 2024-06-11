@@ -2,6 +2,7 @@ package es.ies.puerto.negocio.mapper;
 
 import es.ies.puerto.modelo.impl.Bestia;
 import es.ies.puerto.negocio.dto.BestiaDTO;
+import es.ies.puerto.negocio.mapper.struct.IBestiaMapper;
 import es.ies.puerto.utilities.Utilities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

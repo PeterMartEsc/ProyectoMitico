@@ -1,10 +1,12 @@
-package es.ies.puerto.negocio.mapper;
+package es.ies.puerto.negocio.mapper.struct;
 
 import es.ies.puerto.modelo.impl.Lugar;
 import es.ies.puerto.negocio.dto.LugarDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-
+/**
+ * Mapper de Lugar a LugarDto
+ */
 @Mapper
 public interface ILugarMapper {
 

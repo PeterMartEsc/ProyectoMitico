@@ -2,6 +2,7 @@ package es.ies.puerto.negocio.mapper;
 
 import es.ies.puerto.modelo.impl.Suceso;
 import es.ies.puerto.negocio.dto.SucesoDTO;
+import es.ies.puerto.negocio.mapper.struct.ISucesoMapper;
 import es.ies.puerto.utilities.Utilities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

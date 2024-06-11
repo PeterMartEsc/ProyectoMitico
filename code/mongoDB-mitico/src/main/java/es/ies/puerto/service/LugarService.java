@@ -3,7 +3,7 @@ package es.ies.puerto.service;
 import es.ies.puerto.modelo.db.dao.DaoLugar;
 import es.ies.puerto.modelo.impl.Lugar;
 import es.ies.puerto.negocio.dto.LugarDTO;
-import es.ies.puerto.negocio.mapper.ILugarMapper;
+import es.ies.puerto.negocio.mapper.struct.ILugarMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Operaciones DAO-Service de la clase Lugar
+ */
 @Service
 public class LugarService implements IService<LugarDTO> {
     private final static Logger LOGGER = LoggerFactory.getLogger(LugarService.class);

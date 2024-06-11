@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Operaciones DAO REST de la clase Bestia
+ */
 @RestController
 @RequestMapping("/bestia")
 public class BestiaRest implements IRest <BestiaDTO> {
