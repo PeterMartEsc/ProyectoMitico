@@ -20,7 +20,7 @@ La Base de Datos que hemos creado, es de temática mitológica. Las tablas son l
 
 ## Herramientas Utilizadas
 
-Para realizar las operaciones CRUD (Create Read Update Delete), hemos utilizado Mongo Repository. 
+Para realizar las operaciones CRUD (Create Read Update Delete), hemos utilizado Mongo Repository, y la Base de Datos está creada en mongoDB. 
 
 <br>
 
