@@ -1,7 +1,9 @@
 package es.ies.puerto.negocio.dto;
 
 import java.util.Objects;
-
+/**
+ * Clase Dto para la clase Dios
+ */
 public class DiosDTO {
     private int id;
 
