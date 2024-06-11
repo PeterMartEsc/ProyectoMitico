@@ -12,7 +12,7 @@
 
   <groupId>es.ies.puerto</groupId>
   <artifactId>proyecto-mitologico</artifactId>
-  <version>1</version>
+  <version>0.0.1-SNAPSHOT</version>
   <name>proyecto-mitologico</name>
   <description>Proyecto de bbdd en mongo</description>
 
@@ -110,11 +110,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
   </dependencies>
 
