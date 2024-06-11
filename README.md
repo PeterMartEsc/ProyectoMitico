@@ -12,15 +12,15 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
 - [Tablas de la BBDD](tablas)
 
-    - [Procedencia](tablas/procedencia/img/procedencia-tabla.png)
+    - [Procedencia](tablas/procedencia)
 
-    - [Dioses](tablas/dioses/img/dioses-tabla.png)
+    - [Dioses](tablas/dioses)
 
-    - [Bestias](tablas/bestias/img/Tabla-bestias.png)
+    - [Bestias](tablas/bestias)
 
-    - [Lugares](tablas/lugares/img/tabla-lugares.png)
+    - [Lugares](tablas/lugares)
 
-    - [Sucesos](tablas/sucesos/img/Tabla-Sucesos.png)
+    - [Sucesos](tablas/sucesos)
 
 - [Codigo](code/mongoDB-mitico)
 

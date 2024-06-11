@@ -35,3 +35,11 @@
 <img src="./bestias/img/Tabla-bestias.png">
 
 </div>
+
+# Sucesos
+
+<div style="text-align: center">
+
+<img src="./sucesos/img/Tabla-Sucesos.png">
+
+</div>
