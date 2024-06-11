@@ -24,4 +24,5 @@ Proyecto final de primero de __Desarrollo de Aplicaciones Multiplataformas (DAM)
 
 - [Codigo](code/mongoDB-mitico)
 
+- [Swagger](http://localhost:8080/api-mitologia/swagger-ui/index.html#/suceso-rest/getAll)
 </div>
