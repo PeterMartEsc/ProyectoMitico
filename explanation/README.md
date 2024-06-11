@@ -35,3 +35,13 @@ También hemos implementado servicios red para acceder y editar la bbdd a travé
 <div style="text-align: center">
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Fq2hsViLjy_-eqFigD5JQQHaEO%26pid%3DApi&f=1&ipt=d84c323199bd8f84af6384ddd73c8b44536234d4eae1d05ffd9650f5ef9b2a2d&ipo=images">
 </div>
+
+Los ides utilizados fueron Visual Studio Code e Intellij Idea
+
+<div style="text-align: center">
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.eYv4AmZgSbbQLDlvDKd4GwHaHa%26pid%3DApi&f=1&ipt=dc5e5f805e4698c2a66cf2aa224cdd2676a4d7fad12066a9f00dca81d49f5d09&ipo=images">
+</div>
+
+<div style="text-align: center">
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F2d%2FVisual_Studio_Code_1.18_icon.svg%2F1200px-Visual_Studio_Code_1.18_icon.svg.png&f=1&nofb=1&ipt=946542289a2f5e2e293938e37bdbe01f5ed90236155e76f39b8f49a8b3d193c4&ipo=images">
+</div>
