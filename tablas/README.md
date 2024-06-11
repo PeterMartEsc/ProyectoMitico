@@ -17,3 +17,21 @@
 </div>
 
 <br>
+
+# Bestias
+
+<div style="text-align: center">
+
+<img src="./bestias/img/Tabla-bestias.png">
+
+</div>
+
+<br>
+
+# Lugares
+
+<div style="text-align: center">
+
+<img src="./bestias/img/Tabla-bestias.png">
+
+</div>
