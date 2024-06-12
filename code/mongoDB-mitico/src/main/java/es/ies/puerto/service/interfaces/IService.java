@@ -12,9 +12,7 @@ public interface IService <T> {
 
     public T getByIdFromCollection(int id);
 
-    public void addToCollection(T t);
-
-    public void updateCollection(T t);
+    public void addOrUpdateCollection(T t);
 
     public void deleteFromCollection(int id);
 

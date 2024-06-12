@@ -32,7 +32,7 @@ public class BestiaRest implements IRest <BestiaDTO> {
     @Override
     @PostMapping("/")
     public ResponseEntity add(@RequestBody BestiaDTO bestiaDTO) {
-        bestiaService.addToCollection(bestiaDTO);
+        bestiaService.addOrUpdateCollection(bestiaDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
@@ -40,7 +40,7 @@ public class BestiaRest implements IRest <BestiaDTO> {
     @Override
     @PutMapping("/")
     public ResponseEntity update(@RequestBody BestiaDTO bestiaDTO) {
-        bestiaService.updateCollection(bestiaDTO);
+        bestiaService.addOrUpdateCollection(bestiaDTO);
         return ResponseEntity.ok().build();
     }
 

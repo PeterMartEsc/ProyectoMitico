@@ -31,7 +31,7 @@ public class LugarRest implements IRest <LugarDTO> {
     @Override
     @PostMapping("/")
     public ResponseEntity add(@RequestBody LugarDTO lugarDTO) {
-        lugarService.addToCollection(lugarDTO);
+        lugarService.addOrUpdateCollection(lugarDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
@@ -39,7 +39,7 @@ public class LugarRest implements IRest <LugarDTO> {
     @Override
     @PutMapping("/")
     public ResponseEntity update(@RequestBody LugarDTO lugarDTO) {
-        lugarService.updateCollection(lugarDTO);
+        lugarService.addOrUpdateCollection(lugarDTO);
         return ResponseEntity.ok().build();
     }
 

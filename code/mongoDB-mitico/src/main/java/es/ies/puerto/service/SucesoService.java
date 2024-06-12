@@ -2,7 +2,9 @@ package es.ies.puerto.service;
 
 import es.ies.puerto.modelo.db.dao.DaoSuceso;
 import es.ies.puerto.modelo.impl.Suceso;
+import es.ies.puerto.negocio.dto.BestiaDTO;
 import es.ies.puerto.negocio.dto.SucesoDTO;
+import es.ies.puerto.negocio.mapper.struct.IBestiaMapper;
 import es.ies.puerto.negocio.mapper.struct.ISucesoMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
@@ -43,8 +45,12 @@ public class SucesoService implements IService<SucesoDTO> {
     }
 
     @Override
-    public void addToCollection(SucesoDTO sucesoDTO) {
-        daoSuceso.insert(ISucesoMapper.INSTANCE.dtoToEntity(sucesoDTO));
+    public void addOrUpdateCollection(SucesoDTO sucesoDTO) {
+        if (!daoSuceso.existsById(sucesoDTO.getId())) {
+            daoSuceso.insert(ISucesoMapper.INSTANCE.dtoToEntity(sucesoDTO));
+        } else {
+            daoSuceso.save(ISucesoMapper.INSTANCE.dtoToEntity(sucesoDTO));
+        }
     }
 
     @Override
@@ -52,15 +58,5 @@ public class SucesoService implements IService<SucesoDTO> {
         Suceso equipment = daoSuceso.findById(id).orElseThrow(
                 () -> new RuntimeException("Cannot find '" + id + "' entity"));
         daoSuceso.delete(equipment);
-    }
-
-    @Override
-    public void updateCollection(SucesoDTO sucesoDTO) {
-        Suceso suceso = daoSuceso.findById(sucesoDTO.getId()).orElseThrow(
-                () -> new RuntimeException("Cannot find " + sucesoDTO.getNombre() + " entity"));
-
-        suceso = ISucesoMapper.INSTANCE.dtoToEntity(sucesoDTO);
-
-        daoSuceso.save(suceso);
     }
 }

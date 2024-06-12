@@ -31,7 +31,7 @@ public class DiosRest implements IRest <DiosDTO> {
     @Override
     @PostMapping("/")
     public ResponseEntity add(@RequestBody DiosDTO diosDTO) {
-        diosService.addToCollection(diosDTO);
+        diosService.addOrUpdateCollection(diosDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
@@ -39,7 +39,7 @@ public class DiosRest implements IRest <DiosDTO> {
     @Override
     @PutMapping("/")
     public ResponseEntity update(@RequestBody DiosDTO diosDTO) {
-        diosService.updateCollection(diosDTO);
+        diosService.addOrUpdateCollection(diosDTO);
         return ResponseEntity.ok().build();
     }
 

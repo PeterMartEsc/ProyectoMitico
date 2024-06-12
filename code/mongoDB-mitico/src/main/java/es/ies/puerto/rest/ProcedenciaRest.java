@@ -31,7 +31,7 @@ public class ProcedenciaRest implements IRest <ProcedenciaDTO> {
     @Override
     @PostMapping("/")
     public ResponseEntity add(@RequestBody ProcedenciaDTO procedenciaDTO) {
-        procedenciaService.addToCollection(procedenciaDTO);
+        procedenciaService.addOrUpdateCollection(procedenciaDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
@@ -39,7 +39,7 @@ public class ProcedenciaRest implements IRest <ProcedenciaDTO> {
     @Override
     @PutMapping("/")
     public ResponseEntity update(@RequestBody ProcedenciaDTO procedenciaDTO) {
-        procedenciaService.updateCollection(procedenciaDTO);
+        procedenciaService.addOrUpdateCollection(procedenciaDTO);
         return ResponseEntity.ok().build();
     }
 

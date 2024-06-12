@@ -44,8 +44,12 @@ public class BestiaService implements IService<BestiaDTO> {
     }
 
     @Override
-    public void addToCollection(BestiaDTO bestiaDTO) {
-        daoBestia.insert(IBestiaMapper.INSTANCE.dtoToEntity(bestiaDTO));
+    public void addOrUpdateCollection(BestiaDTO bestiaDTO) {
+        if (!daoBestia.existsById(bestiaDTO.getId())) {
+            daoBestia.insert(IBestiaMapper.INSTANCE.dtoToEntity(bestiaDTO));
+        } else {
+            daoBestia.save(IBestiaMapper.INSTANCE.dtoToEntity(bestiaDTO));
+        }
     }
 
     @Override
@@ -53,15 +57,5 @@ public class BestiaService implements IService<BestiaDTO> {
         Bestia equipment = daoBestia.findById(id).orElseThrow(
                 () -> new RuntimeException("Cannot find '" + id + "' entity"));
         daoBestia.delete(equipment);
-    }
-
-    @Override
-    public void updateCollection(BestiaDTO bestiaDTO) {
-        Bestia bestia = daoBestia.findById(bestiaDTO.getId()).orElseThrow(
-                () -> new RuntimeException("Cannot find " + bestiaDTO.getNombre() + " entity"));
-
-        bestia = IBestiaMapper.INSTANCE.dtoToEntity(bestiaDTO);
-
-        daoBestia.save(bestia);
     }
 }

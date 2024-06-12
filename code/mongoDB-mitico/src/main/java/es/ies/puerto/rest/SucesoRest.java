@@ -31,7 +31,7 @@ public class SucesoRest implements IRest <SucesoDTO> {
     @Override
     @PostMapping("/")
     public ResponseEntity add(@RequestBody SucesoDTO sucesoDTO) {
-        sucesoService.addToCollection(sucesoDTO);
+        sucesoService.addOrUpdateCollection(sucesoDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
@@ -39,7 +39,7 @@ public class SucesoRest implements IRest <SucesoDTO> {
     @Override
     @PutMapping("/")
     public ResponseEntity update(@RequestBody SucesoDTO sucesoDTO) {
-        sucesoService.updateCollection(sucesoDTO);
+        sucesoService.addOrUpdateCollection(sucesoDTO);
         return ResponseEntity.ok().build();
     }
 

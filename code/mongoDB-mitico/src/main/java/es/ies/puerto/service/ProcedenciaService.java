@@ -2,7 +2,9 @@ package es.ies.puerto.service;
 
 import es.ies.puerto.modelo.db.dao.DaoProcedencia;
 import es.ies.puerto.modelo.impl.Procedencia;
+import es.ies.puerto.negocio.dto.BestiaDTO;
 import es.ies.puerto.negocio.dto.ProcedenciaDTO;
+import es.ies.puerto.negocio.mapper.struct.IBestiaMapper;
 import es.ies.puerto.negocio.mapper.struct.IProcedenciaMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
@@ -43,8 +45,12 @@ public class ProcedenciaService implements IService<ProcedenciaDTO> {
     }
 
     @Override
-    public void addToCollection(ProcedenciaDTO procedenciaDTO) {
-        daoProcedencia.insert(IProcedenciaMapper.INSTANCE.dtoToEntity(procedenciaDTO));
+    public void addOrUpdateCollection(ProcedenciaDTO procedenciaDTO) {
+        if (!daoProcedencia.existsById(procedenciaDTO.getId())) {
+            daoProcedencia.insert(IProcedenciaMapper.INSTANCE.dtoToEntity(procedenciaDTO));
+        } else {
+            daoProcedencia.save(IProcedenciaMapper.INSTANCE.dtoToEntity(procedenciaDTO));
+        }
     }
 
     @Override
@@ -52,15 +58,5 @@ public class ProcedenciaService implements IService<ProcedenciaDTO> {
         Procedencia equipment = daoProcedencia.findById(id).orElseThrow(
                 () -> new RuntimeException("Cannot find '" + id + "' entity"));
         daoProcedencia.delete(equipment);
-    }
-
-    @Override
-    public void updateCollection(ProcedenciaDTO procedenciaDTO) {
-        Procedencia procedencia = daoProcedencia.findById(procedenciaDTO.getId()).orElseThrow(
-                () -> new RuntimeException("Cannot find " + procedenciaDTO.getNombre() + " entity"));
-
-        procedencia = IProcedenciaMapper.INSTANCE.dtoToEntity(procedenciaDTO);
-
-        daoProcedencia.save(procedencia);
     }
 }

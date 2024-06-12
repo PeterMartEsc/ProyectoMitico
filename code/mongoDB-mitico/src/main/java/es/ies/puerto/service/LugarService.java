@@ -2,7 +2,9 @@ package es.ies.puerto.service;
 
 import es.ies.puerto.modelo.db.dao.DaoLugar;
 import es.ies.puerto.modelo.impl.Lugar;
+import es.ies.puerto.negocio.dto.BestiaDTO;
 import es.ies.puerto.negocio.dto.LugarDTO;
+import es.ies.puerto.negocio.mapper.struct.IBestiaMapper;
 import es.ies.puerto.negocio.mapper.struct.ILugarMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
@@ -43,24 +45,17 @@ public class LugarService implements IService<LugarDTO> {
     }
 
     @Override
-    public void addToCollection(LugarDTO lugarDTO) {
-        daoLugar.insert(ILugarMapper.INSTANCE.dtoToEntity(lugarDTO));
+    public void addOrUpdateCollection(LugarDTO lugarDTO) {
+        if (!daoLugar.existsById(lugarDTO.getId())) {
+            daoLugar.insert(ILugarMapper.INSTANCE.dtoToEntity(lugarDTO));
+        } else {
+            daoLugar.save(ILugarMapper.INSTANCE.dtoToEntity(lugarDTO));
+        }
     }
-
     @Override
     public void deleteFromCollection(int id) {
         Lugar equipment = daoLugar.findById(id).orElseThrow(
                 () -> new RuntimeException("Cannot find '" + id + "' entity"));
         daoLugar.delete(equipment);
-    }
-
-    @Override
-    public void updateCollection(LugarDTO lugarDTO) {
-        Lugar lugar = daoLugar.findById(lugarDTO.getId()).orElseThrow(
-                () -> new RuntimeException("Cannot find " + lugarDTO.getNombre() + " entity"));
-
-        lugar = ILugarMapper.INSTANCE.dtoToEntity(lugarDTO);
-
-        daoLugar.save(lugar);
     }
 }

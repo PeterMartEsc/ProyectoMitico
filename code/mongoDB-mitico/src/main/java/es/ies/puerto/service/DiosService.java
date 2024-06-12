@@ -2,7 +2,9 @@ package es.ies.puerto.service;
 
 import es.ies.puerto.modelo.db.dao.DaoDios;
 import es.ies.puerto.modelo.impl.Dios;
+import es.ies.puerto.negocio.dto.BestiaDTO;
 import es.ies.puerto.negocio.dto.DiosDTO;
+import es.ies.puerto.negocio.mapper.struct.IBestiaMapper;
 import es.ies.puerto.negocio.mapper.struct.IDiosMapper;
 import es.ies.puerto.service.interfaces.IService;
 import org.slf4j.Logger;
@@ -43,24 +45,17 @@ public class DiosService implements IService<DiosDTO> {
     }
 
     @Override
-    public void addToCollection(DiosDTO diosDTO) {
-        daoDios.insert(IDiosMapper.INSTANCE.dtoToEntity(diosDTO));
+    public void addOrUpdateCollection(DiosDTO diosDTO) {
+        if (!daoDios.existsById(diosDTO.getId())) {
+            daoDios.insert(IDiosMapper.INSTANCE.dtoToEntity(diosDTO));
+        } else {
+            daoDios.save(IDiosMapper.INSTANCE.dtoToEntity(diosDTO));
+        }
     }
-
     @Override
     public void deleteFromCollection(int id) {
         Dios equipment = daoDios.findById(id).orElseThrow(
                 () -> new RuntimeException("Cannot find '" + id + "' entity"));
         daoDios.delete(equipment);
-    }
-
-    @Override
-    public void updateCollection(DiosDTO diosDTO) {
-        Dios dios = daoDios.findById(diosDTO.getId()).orElseThrow(
-                () -> new RuntimeException("Cannot find " + diosDTO.getNombre() + " entity"));
-
-        dios = IDiosMapper.INSTANCE.dtoToEntity(diosDTO);
-
-        daoDios.save(dios);
     }
 }
